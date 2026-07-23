@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1000 memories — Wedding Photography &amp; Design Studio</title>
+    <meta
+      name="description"
+      content="1000 Stories is a wedding photography and design studio. A showcase of weddings we've told the story of, and a place to say hello."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- =========================================================
+     HEADER
+     ========================================================= -->
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <a href="#" class="logo">Thousand Memories</a>
+
+        <nav class="nav-desktop">
+          <a href="#weddings">Portfolio</a>
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn--ghost-light">Get in touch</a>
+          <button
+            class="hamburger"
+            id="hamburgerBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!--
+  NOTE: nav-mobile lives OUTSIDE <header> on purpose.
+  <header> is position:fixed, and once it gains backdrop-filter
+  (see .is-scrolled in style.css) it becomes a new "containing block"
+  for any position:fixed element nested inside it — which breaks the
+  full-screen mobile menu (it renders confined to the header's box
+  instead of covering the viewport). Keeping nav-mobile as a sibling
+  of header, positioned relative to <body>, avoids that entirely.
+-->
+    <div class="nav-mobile" id="navMobile">
+      <a href="#weddings">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- =========================================================
+     HERO — full-screen video
+     ========================================================= -->
+    <section class="hero" id="hero">
+      <div class="hero-media">
+        <!--
+      REPLACE ME: put your own hero video at assets/video/hero.mp4
+      (and a .webm version if you want broader browser support).
+      The poster image shows while the video loads / on unsupported browsers.
+      Recommended: 1920x1080, under 15s loop, under 8MB for fast load.
+    -->
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/images/misc/hero-poster.jpg"
+        >
+          <source src="assets/video/hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="hero-content">
+        <span class="eyebrow">thousand memories</span>
+        <h1 class="hero-title">
+          Every wedding has a thousand stories. Here are some of ours.
+        </h1>
+        <p class="hero-sub">
+          A wedding photography &amp; design studio. Have a look through the
+          weddings we've had the honour of telling — and say hello if you'd like
+          to talk.
+        </p>
+        <div class="hero-actions">
+          <a href="#weddings" class="btn btn--ghost-light"
+            >View the Portfolio</a
+          >
+          <a href="#contact" class="btn btn--primary">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="scroll-cue">
+        <span class="label">Scroll</span>
+        <span class="line"></span>
+      </div>
+    </section>
+
+    <!-- Stat strip -->
+    <div class="stat-strip">
+      <div class="container">
+        <div class="stat-strip-inner">
+          <div class="stat">
+            <strong>300+</strong><span>Weddings Documented</span>
+          </div>
+          <div class="stat"><strong>12</strong><span>Years of Craft</span></div>
+          <div class="stat">
+            <strong>5.0</strong><span>Average Couple Rating</span>
+          </div>
+          <div class="stat">
+            <strong>18</strong><span>Cities Worked In</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+     INTRO / PHILOSOPHY
+     ========================================================= -->
+    <section class="section intro" id="about">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="intro-media" data-reveal>
+            <div class="frame-accent"></div>
+            <!-- REPLACE ME: swap this src for your own studio / founder photo -->
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=900&auto=format&fit=crop"
+              alt="Wedding stationery and florals styled on a table"
+            />
+          </div>
+          <div class="intro-text" data-reveal>
+            <span class="eyebrow">Who we are</span>
+            <p class="quote">
+              Every couple carries a thousand small stories into their wedding
+              day. We just try to notice them.
+            </p>
+            <p class="body-copy">
+              1000 Stories is a wedding photography and design studio. We don't
+              run your wedding day-to-day — that's your planner's craft — but
+              where we're brought in to shoot, style, or help shape a detail, we
+              do it with real care. This page is a look through some of the
+              weddings we've been trusted with. If something here feels like
+              your kind of day, we'd love to hear from you.
+            </p>
+            <div class="signature-row">
+              <span class="sig">Meera &amp; team</span>
+              <span class="sig-meta">Founder &amp; Creative Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">
+      <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 20 C40 5, 60 35, 100 20 C140 5, 160 35, 200 20"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <circle cx="100" cy="20" r="3" fill="currentColor" />
+        <path
+          d="M92 20 C88 12, 96 10, 100 16 C104 10, 112 12, 108 20 C112 28, 104 30, 100 24 C96 30, 88 28, 92 20Z"
+          fill="currentColor"
+          opacity="0.5"
+        />
+      </svg>
+    </div>
+
+    <!-- =========================================================
+     PORTFOLIO / FEATURED WEDDINGS
+     ========================================================= -->
+    <section class="section" id="weddings">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">The portfolio</span>
+          <h2 class="section-title">A few of the stories we've told</h2>
+          <p class="lede">
+            A small selection from recent seasons — destination weddings,
+            intimate ceremonies, and everything in between.
+          </p>
+        </div>
+
+        <div class="gallery-filters" data-reveal>
+          <button class="is-active" data-filter="all">All</button>
+          <button data-filter="destination">Destination</button>
+          <button data-filter="intimate">Intimate</button>
+          <button data-filter="traditional">Traditional</button>
+          <button data-filter="editorial">Editorial</button>
+        </div>
+
+        <div class="gallery-grid" data-reveal>
+          <a
+            class="gallery-item is-wide is-tall"
+            href="#"
+            data-category="destination"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop"
+              alt="Bride and groom at golden hour"
+            />
+            <div class="overlay">
+              <div>
+                <div class="ov-title">Anjali &amp; Rohan</div>
+                <div class="ov-sub">Alibaug, Coastal Estate</div>
+              </div>
+            </div>
+          </a>
+          <a class="gallery-item" href="#" data-category="editorial">
+            <img
+              src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800&auto=format&fit=crop"
+              alt="Wedding table florals detail"
+            />
+            <div class="overlay">
+              <div>
+                <div class="ov-title">Table Details</div>
+                <div class="ov-sub">Floral Styling</div>
+              </div>
+            </div>
+          </a>
+          <a class="gallery-item" href="#" data-category="intimate">
+            <img
+              src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=800&auto=format&fit=crop"
+              alt="Wedding rings detail shot"
+            />
+            <div class="overlay">
+              <div>
+                <div class="ov-title">The Details</div>
+                <div class="ov-sub">Ring Shot</div>
+              </div>
+            </div>
+          </a>
+          <a class="gallery-item is-wide" href="#" data-category="traditional">
+            <img
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop"
+              alt="Wedding ceremony aisle decor"
+            />
+            <div class="overlay">
+              <div>
+                <div class="ov-title">Kavya &amp; Arjun</div>
+                <div class="ov-sub">Udaipur, Lakeside Palace</div>
+              </div>
+            </div>
+          </a>
+          <a class="gallery-item" href="#" data-category="intimate">
+            <img
+              src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=800&auto=format&fit=crop"
+              alt="Bride getting ready"
+            />
+            <div class="overlay">
+              <div>
+                <div class="ov-title">Morning Light</div>
+                <div class="ov-sub">Getting Ready</div>
+              </div>
+            </div>
+          </a>
+          <a class="gallery-item" href="#" data-category="destination">
+            <img
+              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=800&auto=format&fit=crop"
+              alt="Couple dancing at reception"
+            />
+            <div class="overlay">
+              <div>
+                <div class="ov-title">First Dance</div>
+                <div class="ov-sub">Reception</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="gallery-cta" data-reveal>
+          <a href="#contact" class="btn btn--ghost-dark"
+            >See More on Instagram</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="divider">
+      <svg viewBox="0 0 200 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M0 20 C40 5, 60 35, 100 20 C140 5, 160 35, 200 20"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <circle cx="100" cy="20" r="3" fill="currentColor" />
+        <path
+          d="M92 20 C88 12, 96 10, 100 16 C104 10, 112 12, 108 20 C112 28, 104 30, 100 24 C96 30, 88 28, 92 20Z"
+          fill="currentColor"
+          opacity="0.5"
+        />
+      </svg>
+    </div>
+
+    <!-- =========================================================
+     TESTIMONIALS
+     ========================================================= -->
+    <section class="section section--alt" id="testimonials">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Kind words</span>
+          <h2 class="section-title">From couples we've loved working with</h2>
+        </div>
+
+        <div class="testimonial-wrap" data-reveal>
+          <div class="testimonial-slide is-active">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              1000 Stories understood exactly who we were within the first
+              meeting. Every photo from our wedding day felt like us — nothing
+              borrowed, nothing generic.
+            </p>
+            <p class="attr">Anjali &amp; Rohan — Alibaug</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              We handed them the vision and they just got it. Calm, unobtrusive,
+              and endlessly creative — our families still talk about the photos.
+            </p>
+            <p class="attr">Kavya &amp; Arjun — Udaipur</p>
+          </div>
+          <div class="testimonial-slide">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              They somehow captured moments we didn't even know were happening.
+              Looking through the gallery still makes us tear up.
+            </p>
+            <p class="attr">Priya &amp; Dev — Goa</p>
+          </div>
+          <div class="testimonial-dots">
+            <button
+              class="is-active"
+              data-slide="0"
+              aria-label="Show testimonial 1"
+            ></button>
+            <button data-slide="1" aria-label="Show testimonial 2"></button>
+            <button data-slide="2" aria-label="Show testimonial 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     FAQ
+     ========================================================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Good to know</span>
+          <h2 class="section-title">Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list" data-reveal>
+          <div class="faq-item is-open">
+            <button class="faq-q">
+              <span>What kind of weddings do you cover?</span
+              ><span class="plus"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Mostly Indian weddings across a range of styles — intimate
+                garden ceremonies, multi-day traditional weddings, and
+                destination celebrations. The portfolio above is a fair sample
+                of what we love shooting.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>Do you travel outside Kochi?</span
+              ><span class="plus"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Yes — we travel across India regularly, and take on a limited
+                number of international dates each year.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>Do you also handle styling, or just photography?</span
+              ><span class="plus"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Both, depending on the wedding — some of the work above is
+                photography only, some includes styling input. We'll always be
+                upfront about what a given collaboration would involve.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              <span>How do we get in touch?</span><span class="plus"></span>
+            </button>
+            <div class="faq-a">
+              <p>
+                Use the form below, email us directly, or start a conversation
+                with our chat assistant in the corner of this page — whichever's
+                easiest.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     CTA / CONTACT
+     ========================================================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="cta-section" data-reveal>
+          <div class="cta-copy">
+            <span class="eyebrow">Let's talk</span>
+            <h2 class="section-title">Tell us about your day</h2>
+            <p>
+              Share a few details and our team will get back to you within two
+              working days.
+            </p>
+            <div class="cta-details">
+              <a href="mailto:hello@1000stories.studio"
+                >hello@1000stories.studio</a
+              >
+              <a href="tel:+919999999999">+91 99999 99999</a>
+            </div>
+          </div>
+
+          <form class="cta-form" id="enquiryForm">
+            <!--
+          REPLACE ME: this form has no backend attached.
+          Easiest options: point the form's action at a service like
+          Formspree / Basin, or wire the JS submit handler in js/script.js
+          to your own email API.
+        -->
+            <div class="form-grid">
+              <div class="field">
+                <label for="fName">Your name</label
+                ><input
+                  id="fName"
+                  name="name"
+                  type="text"
+                  placeholder="Anjali &amp; Rohan"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="fDate">Wedding date</label
+                ><input id="fDate" name="date" type="date" />
+              </div>
+              <div class="field full">
+                <label for="fEmail">Email</label
+                ><input
+                  id="fEmail"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+              <div class="field full">
+                <label for="fMsg">Tell us a little about your day</label
+                ><textarea
+                  id="fMsg"
+                  name="message"
+                  placeholder="City, guest count, style you're drawn to..."
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary">Send Enquiry</button>
+            <p class="form-note">
+              We reply within two working days. No spam, ever.
+            </p>
+            <div class="form-success" id="formSuccess">
+              Thank you — your enquiry has been noted. We'll be in touch soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     FOOTER
+     ========================================================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#" class="logo">1000 Stories</a>
+            <p>
+              A wedding photography &amp; design studio. Every love story
+              deserves to be told beautifully.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" /></svg
+              ></a>
+              <a href="#" aria-label="Pinterest"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path
+                    d="M9 17c1-3 1.5-6 2-9m1 4c2 1 4-.5 4-3 0-2-1.5-3.5-4-3.5-3 0-4.5 2-4.5 4"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h3l1-3h-4V9c0-.6.4-1 1-1Z"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#weddings">Portfolio</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Studio</h4>
+            <ul>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Journal</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul>
+              <li>
+                <a href="mailto:hello@1000stories.studio"
+                  >hello@1000stories.studio</a
+                >
+              </li>
+              <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+              <li>
+                <span style="color: var(--color-ink-soft)">Kochi, India</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 1000 Stories. All rights reserved.</span>
+          <span>Design by 1000 Stories Studio</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+     CHAT AGENT WIDGET
+     ========================================================= -->
+    <button
+      class="chat-launcher"
+      id="chatLauncher"
+      aria-label="Open chat assistant"
+      aria-expanded="false"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.6"
+      >
+        <path
+          d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.3 0-2.5-.3-3.6-.8L3 21l1.9-5.2A8.5 8.5 0 1 1 21 11.5Z"
+        />
+      </svg>
+      <span class="chat-dot"></span>
+    </button>
+
+    <div
+      class="chat-panel"
+      id="chatPanel"
+      role="dialog"
+      aria-label="Chat with 1000 Stories"
+    >
+      <div class="chat-header">
+        <div>
+          <div class="title">Ask 1000 Stories</div>
+          <div class="subtitle" id="chatSubtitle">Studio assistant</div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-suggestions" id="chatSuggestions">
+        <button data-q="What kind of weddings do you shoot?">
+          What kind of weddings do you shoot?
+        </button>
+        <button data-q="Do you travel outside Kochi?">
+          Do you travel outside Kochi?
+        </button>
+        <button data-q="How do I get in touch?">How do I get in touch?</button>
+      </div>
+      <form class="chat-input-row" id="chatForm">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Type a message…"
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Send message">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/chat.js"></script>
+  </body>
+</html>
